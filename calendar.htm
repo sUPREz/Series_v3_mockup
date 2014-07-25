@@ -9,15 +9,20 @@
 <style>
 a{ color: #88BBDD; text-decoration: none; }
 a:hover{ color: #AACCEE; text-decoration: underline; }
+table table a{ color: #009; text-decoration: none; }
+table table a:hover{ color: #009; text-decoration: underline; }
 
 
 </style>
 <body style="font-family: Calibri ;margin:0px; background-color: #212121; color: #EEEEEE;">
   <div style="width: 1250px; margin: 0 auto; border: 1px solid #000; background-color: #262626">
-    <div style="width: 100%; height: 25px; background-color: #222222; text-align: center;">
-      <div style="display: inline-block; padding-top:3px;"><a href="#">Lien #1</a></div>
+    <div style="width: 100%; height: 25px; background-color: #222222; text-align: center; color:#000;">
+      <div style="display: inline-block; padding-top:3px;"><a href="http://sunnywalker.github.io/jQuery.FilterTable/">jQuery.FilterTable</a></div>
+      |
       <div style="display: inline-block; padding-top:3px;"><a href="#">Lien #2</a></div>
+      |
       <div style="display: inline-block; padding-top:3px;"><a href="#">Lien #3</a></div>
+      |
       <div style="display: inline-block; padding-top:3px;"><a href="#">Lien #4</a></div>
     </div>
     <div style="font-size: 50px; text-align: center; height: 70px; padding-top: 5px; ">Serie !!!</div>
@@ -32,13 +37,15 @@ a:hover{ color: #AACCEE; text-decoration: underline; }
         <div style="position: absolute; left: 20px; top: -18px; font-size: 25px; font-variant: small-caps; font-weight: bold;">Filters</div>
         Who:
         <select>
-          <option>Steph</option>
+          <option>All</option>
+          <option selected>Steph</option>
           <option>Wen</option>
           <option>Wen & Steph</option>
         </select>
         <div style="display: inline-block; width:20px;"></div>
         Status:
         <select>
+          <option selected>All</option>
           <option>Pending</option>
           <option>Finished</option>
           <option>In Progress</option>
@@ -46,21 +53,21 @@ a:hover{ color: #AACCEE; text-decoration: underline; }
         <div style="display: inline-block; width:20px;"></div>
         Ignore:
         <select>
-          <option>Both</option>
+          <option>All</option>
           <option>No</option>
-          <option>Yes</option>
+          <option selected>Yes</option>
         </select>
         <div style="display: inline-block; width:20px;"></div>
         Search:
-        <input type="text" value=""/>
+        <input placeholder="plouf" type="text" value=""/>
       </div>
       <div style="width: 1178px; margin: 20px; padding: 15px; border: 1px solid #000; border-radius: 5px; position: relative; background-color:#4D4D4D">
         <div style="position: absolute; left: 20px; top: -18px; font-size: 25px; font-variant: small-caps; font-weight: bold;">TV Shows</div>
         <table style="width: 100%; border: 1px solid #000; border-collapse: collapse; text-align: center;">
           <tr style="background-color: #000; color:#FFF; height: 25px;">
-            <th style="margin: 0px; padding: 0px; border: 1px solid #000; width: 35px"></th>
-            <th style="margin: 0px; padding: 0px; border: 1px solid #000;">Name</th>
-            <th style="margin: 0px; padding: 0px; border: 1px solid #000; width: 70px">Ep.</th>
+            <th style="margin: 0px; padding: 0px; border: 1px solid #000; width: 35px">#</th>
+            <th style="margin: 0px; padding: 0px; border: 1px solid #000;">Ep. Name</th>
+            <th style="margin: 0px; padding: 0px; border: 1px solid #000; width: 70px">Ep. #</th>
             <th style="margin: 0px; padding: 0px; border: 1px solid #000; width: 200px">Date</th>
             <th style="margin: 0px; padding: 0px; border: 1px solid #000; width: 40px">DL</th>
             <th style="margin: 0px; padding: 0px; border: 1px solid #000; width: 40px">Sub</th>
@@ -72,9 +79,9 @@ a:hover{ color: #AACCEE; text-decoration: underline; }
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">1.</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="#">Name #1</a></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">S4 E9</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">Lundi 14 janvier</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#009900"><input type="checkbox" checked /></td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#009900"><input type="checkbox" checked /></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900; color:#003300">Lundi 14 janvier</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900"><input type="checkbox" checked /></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900"><input type="checkbox" checked /></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">-</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="">show</a></td>
@@ -83,9 +90,9 @@ a:hover{ color: #AACCEE; text-decoration: underline; }
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">2.</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="#">Name #2</a></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">S4 E9</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">Mardi 15 janvier</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#009900"><input type="checkbox" checked /></td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#009900"><input type="checkbox" checked /></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900; color:#003300">Mardi 15 janvier</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900"><input type="checkbox" checked /></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900"><input type="checkbox" checked /></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">-</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="">show</a></td>
@@ -94,20 +101,20 @@ a:hover{ color: #AACCEE; text-decoration: underline; }
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">3.</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="#">Name #3</a></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">S4 E9</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">Mercredi 16 janvier</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#009900"><input type="checkbox" checked /></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900; color:#003300">Mercredi 16 janvier</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#669900"><input type="checkbox" checked /></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; position: relative;"><a href="#">Sous-Titres Dispo</a></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; position: relative;"><a href="#">st.eu</a> - <a href="#">LOL (HD)</a> - LOL (32.8%)</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="">show</a></td>
           </tr>
           <tr style="background-color: #626262; border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
             <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000;">4.</td>
             <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000;"><a href="#">Name #4</a></td>
             <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000;">S4 E9</td>
-            <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000;">Jeudi 17 janvier</td>
+            <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000; background-color:#669900; color:#003300">Jeudi 17 janvier</td>
             <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
-            <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000; background-color:#009900"><input type="checkbox" checked /></td>
+            <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000; background-color:#669900"><input type="checkbox" checked /></td>
             <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000; position: relative;"><a href="#">Download</a></td>
             <td style="margin: 0px; padding: 0px;  border-left: 1px solid #000;"><a href="">show</a></td>
@@ -116,87 +123,140 @@ a:hover{ color: #AACCEE; text-decoration: underline; }
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">5.</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="#">Name #5</a></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">S4 E9</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">Vendredi 18 janvier</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#FF9900; color:#333300">Vendredi 18 janvier</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; position: relative;">
-              <a href="#">Download</a> - LOL (32.8%) (ad)
-              <div style=" display: none">
-                <a>DL</a> : <a href="">pb.org</a> - <a href="">goo.gl</a><br />
-                <a href="#">Sub</a> : <a href="#">LOL-DIM (st.eu)</a> - <a href="#">LOL (HD) (ad)</a> - LOL (32.8%) (ad)
-              </div>
-            </td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="">show</a></td>
-          </tr>
-          <tr style="background-color: #626262; border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">6.</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="#">Name #6</a></td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">S4 E9</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">Vendredi 18 janvier</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; position: relative;">
-              <a href="#">Download</a> - DIM (57.3%) (ad)
+              <a href="#">Download</a> - DIM (57.3%)
               <div style="">
                 <a>DL</a> : <a href="">pb.org</a> - <a href="">goo.gl</a><br />
-                <a href="#">Sub</a> : <a href="#">LOL (st.eu)</a> - <a href="#">ASAP (ad)</a> - DIM (57.3%) (ad)
+                <a href="#">Sub</a> : <a href="#">st.eu</a> - <a href="#">ASAP</a> - DIM (57.3%)
               </div>
             </td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="">hide</a></td>
           </tr>
-          <tr style="background-color: #727272; border-bottom: 1px solid #000; border-top: 1px solid #000;">
-            <td colspan="7" style="margin: 0px; padding: 10px; border-left: 1px solid #000; text-align: left">
+          <tr style="background-color: #727272; border-bottom: 1px solid #000; border-top: 1px solid #000; vertical-align: top">
+            <td colspan="3" style="margin: 0px; padding: 10px; border-left: 1px solid #000; text-align: left">
               <div style="display: inline-block; text-decoration: underline; ">Season :</div> 4<br />
               <div style="display: inline-block; text-decoration: underline;">Episode :</div> 9<br />
               <div style="display: inline-block; text-decoration: underline;">Absolute Number :</div> 50<br />
               <div style="display: inline-block; text-decoration: underline;">Episode Name :</div> name<br />
-              <div style="display: inline-block; text-decoration: underline;">Overview :</div> blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla<br />
+              <div style="display: inline-block; text-decoration: underline;">Overview :</div> blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla<br />
               <div style="display: inline-block; text-decoration: underline;">link :</div> <a href="http://www.imdb.com/title/tt1681772/" target="_blank">IMDB</a><br />
             </td>
+            <td colspan="4" style="margin: 0px; padding: 2px; border-left: 1px solid #000; text-align: left">
+                <table style="width: 100%; border: 1px solid #000; border-collapse: collapse; text-align: center; font-size: 12px; color: #000; background-color: #FFF; table-layout: fixed;">
+                  <tr>
+                    <th style="background-color: #D2B9A6; color: #000; margin: 0px; padding: 0px; border: 1px solid #000; width: 229px;">Name</th>
+                    <th style="background-color: #D2B9A6; color: #000; margin: 0px; padding: 0px; border: 1px solid #000; width: 55px;">Size</th>
+                    <th style="background-color: #D2B9A6; color: #000; margin: 0px; padding: 0px; border: 1px solid #000; width: 35px;">Seeds</th>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000; white-space: nowrap; overflow: hidden;"><a href="#" title="The Big Bang Theory S07E24 HDTV x264-LOL [eztv]">The Big Bang Theory S07E24 HDTV x264-LOL [eztv]</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">13020</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000; white-space: nowrap; overflow: hidden;"><a href="#" title="The.Big.Bang.Theory.S07E24.720p.HDTV.X264-DIMENSION[rartv]">The.Big.Bang.Theory.S07E24.720p.HDTV.X264-DIMENSION[rartv]</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">3.47 GiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000; white-space: nowrap; overflow: hidden;"><a href="#" title="The.Big.Bang.Theory.S07E22.720p.HDTV.X264-DIMENSION [PublicHD]">The.Big.Bang.Theory.S07E22.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000;"><a href="#" title="blabla.bla.4">blabla.bla.4</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000;"><a href="#" title="blabla.bla.5">blabla.bla.5</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000;"><a href="#" title="blabla.bla.6">blabla.bla.6</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000;"><a href="#" title="blabla.bla.7">blabla.bla.7</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000;"><a href="#" title="blabla.bla.8">blabla.bla.8</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000;"><a href="#" title="blabla.bla.9">blabla.bla.9</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td style="margin: 0px; padding: 0px; padding-left: 5px; padding-right: 5px; border-left: 1px solid #000;"><a href="#" title="blabla.bla.10">blabla.bla.10</a></td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">606 MiB</td>
+                    <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">322</td>
+                  </tr>
+                  <tr style="border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+                    <td colspan="3" style="margin: 0px; padding: 0px; solid #000;"><a href="#" title="blabla.bla.10">Complete List</a></td>
+                  </tr>
+                </table>
+            </td>
             <td colspan="2" style="margin: 0px; padding: 10px; border-left: 1px solid #000; text-align: left">
-              <ul style="padding-left: 20px;">
-                <lh style="text-decoration: underline;">DL</lh>
-                <li><a href="">piratebay</a> - <a href="">google</a><br /></li>
-                <lh style="text-decoration: underline; ">Sub</lh>
-                <li>
+              <ul style="margin: 0px; padding-left: 20px;">
+                <lh style="text-decoration: underline; margin-left: -20px; font-weight: bold;">DL</lh>
+                <li style="margin-left: 10px;"><a href="">piratebay</a> - <a href="">google</a><br /></li>
+                <lh style="text-decoration: underline; margin-left: -20px; font-weight: bold;">Sub</lh>
+                <li style="margin-left: 10px;">
                   <ul style="padding-left: 20px;">
-                    <lh>Sous-Titres.eu</lh>
-                    <li><a href="#">LOL (st.eu)</a></li>
-                    <lh>Addict7d</lh>
-                    <li><a href="#">ASAP (ad)</a> - DIM (57.3%) (ad)</li>
+                    <lh style="margin-left: -20px; font-weight: bold;">Sous-Titres.eu - <a href="#">direct link</a></lh>
+                    <li style="margin-left: 10px;"><a href="#">Available</a></li>
+                  </ul>
+                </li>
+                <li style="margin-left: 10px;">
+                  <ul style="padding-left: 20px;">
+                    <lh style="margin-left: -20px; font-weight: bold;">Addict7d - <a href="#">direct link</a></lh>
+                    <li style="margin-left: 10px;"><a href="#">ASAP</a></li>
+                    <li style="margin-left: 10px;">DIM (57.3%)</li>
                   </ul>
                 </li>
               </ul>
             </td>
           </tr>
+          <tr style="background-color: #626262; border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">6.</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="#">Name #6</a></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">S4 E9</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#FF9900; color:#333300">Vendredi 18 janvier</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; position: relative;">
+              <a href="#">Download</a> - LOL (32.8%)
+            </td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="">show</a></td>
+          </tr>
           <tr style="background-color: #727272; border-bottom: 1px dashed #000; border-top: 1px dashed #000;">
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">7.</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="#">Name #7</a></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">S4 E9</td>
-            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">Samedi 19 janvier</td>
+            <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000; color:#330000">Samedi 19 janvier</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000; background-color:#CC0000"><input type="checkbox"/></td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;">-</td>
             <td style="margin: 0px; padding: 0px; border-left: 1px solid #000;"><a href="">show</a></td>
           </tr>
-          <tr style="background-color: #727272; border-bottom: 1px solid #000; border-top: 1px solid #000; display: none;">
-            <td colspan="7" style="margin: 0px; padding: 0px; border-left: 1px solid #000; text-align: left">
-              <div style="display: inline-block; text-decoration: underline;">Season :</div> 4<br />
-              <div style="display: inline-block; text-decoration: underline;">Episode :</div> 9<br />
-              <div style="display: inline-block; text-decoration: underline;">Absolute Number :</div> 50<br />
-              <div style="display: inline-block; text-decoration: underline;">Episode Name :</div> name<br />
-              <div style="display: inline-block; text-decoration: underline;">Overview :</div> blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla blabla bla blablabla bla blabbla<br />
-
-            </td>
-            <td colspan="2" style="margin: 0px; padding: 0px; border-left: 1px solid #000;">bb</td>
-          </tr>
         </table>
       </div>
     </div>
   </div>
+  <div style="position:absolute;"> PIRATEBAY </div>
 </body>
 
 </html>
