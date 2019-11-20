@@ -1,0 +1,221 @@
+/* Main */
+a{ color: #6699FF; text-decoration: none; /*font-weight: bold;*/ }
+a:hover{ color: #99BBFF; text-decoration: underline; }
+
+body{
+  font-family: Calibri;
+  margin:0px;
+  background-color: #444444;
+  color: #EEEEEE;
+  font-size: 15px;
+}
+div.Main{
+  width: 1250px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  background-color: #333333;
+}
+div.UpperLinks{
+  width: 100%;
+  height: 25px;
+  background-color: #222222;
+  text-align: center;
+  color: #000;
+}
+div.UpperLinks div{
+  display: inline-block;
+  padding-top:3px;
+}
+div.Header{
+  font-size: 50px;
+  text-align: center;
+  height: 70px;
+  padding-top: 5px;
+}
+div.MainLinks{
+  width: 100%;
+  height: 50px;
+  background-color: #333333;
+  text-align: center;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+}
+div.MainLinks div.Link{
+  display: inline-block;
+  background-color: #222222;
+  height: 37px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 13px;
+  font-size: 20px;
+}
+div.Section{
+  width: 1178px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  position: relative;
+  background-color:#222222
+}
+div.Section div.Title{
+  position: absolute;
+  left: 20px;
+  top: -18px;
+  font-size: 25px;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+div.Section div.Content{
+  display: inline-block;
+  width: 100%;
+}
+
+/* Common */
+table{
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+}
+table tr{
+  color: #FFF;
+}
+table tr th{
+  margin: 0px;
+  padding: 0px;
+  height: 25px;
+  background-color: #000;
+  border: 1px solid #000;
+}
+table tr td{
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px dashed #000;
+  border-left: 1px solid #000;
+}
+table tr.Even{
+  background-color: #333333;
+}
+table tr.Odd{
+  background-color: #2A2A2A;
+}
+table tr.Even:hover,
+table tr.Odd:hover{
+  background-color: #212121;
+}
+
+table tr td.False,
+table tr td.Pending{
+  background-color: #CC0000;
+  color: #330000;
+}
+table tr td.True,
+table tr td.Ended{
+  background-color: #669900;
+  color: #003300;
+}
+table tr td.Continuing{
+  background-color: #FF9900;
+  color: #333300;
+}
+table tr td.NotOld{
+  color: #669900;
+}
+table tr td.Old{
+  color: #FF9900;
+}
+table tr td.VeryOld{
+  color: #CC0000;
+}
+
+/* Specific */
+table tr.FirstLine{}
+table tr.NextLines{ display:none; }
+
+table tr th.Num{ width: 40px; }
+table tr th.SeriesName{ width: 308px; }
+table tr th.TVDB{ width: 100px; }
+table tr th.IMDB{ width: 100px; }
+table tr th.Status{ width: 100px; }
+table tr th.Ignore{ width: 50px; }
+table tr th.Seen{ width: 50px; }
+table tr th.Who{ width: 100px; }
+table tr th.file_time{ width: 200px; }
+table tr th.Details{ width: 120px; }
+table tr td.Overview {
+  text-align: left;
+  padding: 3px;
+}
+table tr td.Details a.Hide{
+  display: none;
+}
+input[type="text"],
+select{
+  width: 100px;
+  background-color: #333;
+  text-indent: 20px;
+  padding:3px;
+  margin: 0;
+  color:#888;
+  border: 1px solid #000;
+  outline:none;
+  display: inline-block;
+  cursor:pointer;
+}
+
+input[type="text"]{
+  border: solid 1px #000;
+  text-indent: 0px;
+  cursor:text;
+  width: 300px
+}
+
+div.Form input[type="checkbox"],
+div.Form select,
+div.Form input[type="text"]{
+  left: 5px;
+  position: relative;
+}
+
+
+td select{
+  border: none;
+}
+
+select.Status{
+  width: 130px;
+}
+
+select.Who[value="1"], /*Nous*/
+select.Who option[id="1"]{
+  color: #0099FF;
+}
+select.Who[value="2"], /*Wen*/
+select.Who option[id="2"]{
+  /* color: #90F; */
+  /* color: #8C25FE; */
+  color: #EA7B00;
+}
+select.Who[value="3"], /*Steph*/
+select.Who option[id="3"]{
+  /*color: #FF3399;*/
+  color: #D10188;
+}
+select.Who[value="4"], /*???*/
+select.Who option[id="4"]{
+  color: #999900;
+}
+
+
+
+div.Form{
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+
+div.Form input[type="checkbox"]{
+  top: 3px;
+}
